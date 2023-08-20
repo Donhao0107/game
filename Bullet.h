@@ -13,6 +13,8 @@ public:
 	void move();
 	//检测碰撞函数，接受一个 Player 对象作为参数，并判断子弹是否与玩家相交
 	//bool collide(Player& player);
+	Coordinate getX();
+	Coordinate getY();
 private:
 	//擦除函数，擦除子弹的图像
 	void eraseBullet();

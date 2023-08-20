@@ -1,5 +1,9 @@
 #include "Keyboard.h"
 
+
+
+
+/*
 Keyboard::Keyboard() {
     keyStates = {
         {Key::A, false},{Key::D, false},{Key::S, false},{Key::W, false}
@@ -133,3 +137,54 @@ void Keyboard::update() {
 
 
 */
+
+Keyboard::Keyboard() {
+}
+
+bool Keyboard::isADown() {
+    
+    if (peekmessage(&key, EX_KEY) && key.vkcode == 65) {
+        return true;
+        flushmessage(); // 清空消息队列
+    }
+    else {
+        return false;
+        flushmessage(); // 清空消息队列
+    }
+}
+
+bool Keyboard::isDDown() {
+    
+    if (peekmessage(&key, EX_KEY) && key.vkcode == 68) {
+        return true;
+        flushmessage(); // 清空消息队列
+    }
+    else {
+        return false;
+        flushmessage(); // 清空消息队列
+    }
+}
+
+bool Keyboard::isSDown() {
+    
+    if (peekmessage(&key, EX_KEY)&&key.vkcode == 83) {
+        return true;
+        flushmessage(); // 清空消息队列
+    }
+    else {
+        return false;
+        flushmessage(); // 清空消息队列
+    }
+}
+
+bool Keyboard::isWDown() {
+    
+    if (peekmessage(&key, EX_KEY) && key.vkcode == 87) {
+        return true;
+        flushmessage(); // 清空消息队列
+    }
+    else {
+        return false;
+        flushmessage(); // 清空消息队列
+    }
+}

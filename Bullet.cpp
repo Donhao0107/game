@@ -12,6 +12,15 @@ void Bullet::move() {
 	placeBullet(); // 绘制新的图像
 }
 
+Bullet::Coordinate Bullet::getX() {
+	return x;
+}
+
+Bullet::Coordinate Bullet::getY() {
+	return y;
+}
+
+
 // 擦除函数，擦除子弹的图像
 void Bullet::eraseBullet() {
 	setfillcolor(WHITE); // 设置填充颜色为黑色
@@ -24,6 +33,3 @@ void Bullet::placeBullet() {
 	solidcircle(x, y, radius); // 画一个实心圆表示子弹的图像
 }
 
-//bool Bullet::collide() {
-//	return false;
-//}

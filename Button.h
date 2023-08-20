@@ -12,7 +12,7 @@ public:
 	//定义一个类型别名，用于存储坐标x或y的值
 	using Coordinate = int;
 	//定义一个类型别名，用于存储文件路径
-	using filePath = std::string;
+	using FilePath = std::string;
 	//构造函数，用于创建Button类的对象
 	//参数分别是按钮的左上右下坐标、图片文件路径和执行函数
 	Button(Coordinate le, Coordinate to, Coordinate ri, Coordinate bo,

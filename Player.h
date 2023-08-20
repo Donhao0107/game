@@ -5,6 +5,7 @@
 #include"Mouse.h" //引入自定义的Mouse(鼠标)类
 #include<vector>  // 引入 vector 库
 #include "Bullet.h"
+#include"Timer.h"
 class Player {
 public:
     using Coordinate = int;  // Coordinate 别名定义为 int
@@ -19,13 +20,19 @@ public:
 
     void shoot(Mouse &monse);
 
+    void clearBullets();
+
+    Coordinate rLeft()const { return left; }
+    Coordinate rTop()const { return top; }
+    Coordinate rRight()const { return right; }
+    Coordinate rBottom()const { return bottom; }
     std::vector<Bullet> bullets;// 定义一个全局的 vector，用于存储所有的子弹
 private:
     // 擦除玩家图像函数
     void erasePlayer();
     // 绘制玩家图像函数
     void placePlayer();
-
+    
     Health health;  // 玩家的健康值
     Coordinate left;  // 左侧坐标
     Coordinate top;  // 上方坐标
